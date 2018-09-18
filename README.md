@@ -1,19 +1,11 @@
 # Kubetail
 
-Bash script that enables you to aggregate (tail/follow) logs from multiple pods into one stream.
-This is the same as running "kubectl logs -f <pod>" but for multiple pods.
+Bash script that enables you to aggregate (tail/follow) logs from multiple pods into one stream, modified for Openshift.
+This is the same as running "oc logs -f <pod>" but for multiple pods.
 
 ## Installation
 
 Just download the [kubetail](https://raw.githubusercontent.com/johanhaleby/kubetail/master/kubetail) file (or any of the [releases](https://github.com/johanhaleby/kubetail/releases)) and you're good to go.
-
-### Homebrew
-
-You can also install kubetail using [brew](https://brew.sh/):
-
-	$ brew tap johanhaleby/kubetail && brew install kubetail
-
-Use `brew install --HEAD kubetail` to install the latest (unreleased) version.
 
 ### Completion
 
@@ -27,7 +19,7 @@ Don't forget to restart your terminal afterwards.
 
 First find the names of all your pods:
 
-	$ kubectl get pods
+	$ oc get pods
 
 This will return a list looking something like this:
 
